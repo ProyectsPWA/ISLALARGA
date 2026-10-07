@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#008489"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#oceanGrad)"/>
+  
+  <!-- Island Silhouette -->
+  <path d="M120 290 C150 210, 260 190, 360 240 C420 270, 410 330, 340 350 C270 370, 160 360, 120 290 Z" fill="url(#sandGrad)"/>
+  
+  <!-- Palm Trees -->
+  <path d="M260 280 Q250 220 220 180" stroke="#78350f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 180 Q190 170 180 190" stroke="#15803d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M220 180 Q210 150 230 150" stroke="#15803d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M220 180 Q250 160 260 180" stroke="#15803d" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Ocean Waves -->
+  <path d="M80 370 Q160 340 240 370 T400 370" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M110 400 Q180 380 260 400 T420 400" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Speedboat Silhouette -->
+  <path d="M320 320 L370 320 L350 335 L310 335 Z" fill="#ffffff"/>
+  <rect x="330" y="312" width="16" height="8" rx="2" fill="#38bdf8"/>
+</svg>
