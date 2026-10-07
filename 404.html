@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>IslaLarga.com - Un tesoro natural en tierras carabobeñas</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icon.svg">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css?v=9">
+</head>
+<body>
+
+  <!-- APP ROOT -->
+  <div id="app">
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- MAIN VIEWS CONTAINER -->
+    <main class="views-container">
+
+      <!-- ====================================================================
+           1. VISTA: LOGIN / REGISTRO
+           ==================================================================== -->
+      <section class="view active no-bottom-nav" id="view-login">
+        <div class="login-backdrop-overlay" aria-hidden="true"></div>
+
+        <div class="login-modal-card">
+          <div class="login-brand-wrapper">
+            <div class="login-logos-row">
+              <img src="images/logo-inparques.png" alt="Inparques" class="login-inparques-img" />
+              <img src="images/logo-islalarga2.svg" alt="IslaLarga.com" class="login-logo-img" />
+            </div>
+            <p class="login-slogan">Un tesoro natural en tierras carabobeñas</p>
+          </div>
+
+          <div class="login-actions">
+            <button class="btn btn-primary btn-login-glass" id="btn-login-action">Iniciar sesión</button>
+            <button class="btn btn-secondary btn-register-glass" id="btn-register-action">Crear cuenta</button>
+            <button class="btn-link btn-forgot-glass" id="btn-forgot-pass">Recuperar contraseña</button>
+            <button class="btn btn-guest btn-guest-glass" id="btn-guest-entry">Continuar como visitante</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           2. VISTA: MENÚ PRINCIPAL
+           ==================================================================== -->
+      <section class="view" id="view-home">
+        <!-- Top App Header with Ocean Gradient and Waves -->
+        <header class="app-header ocean-wave-header">
+          <!-- Capa de Vida Marina Animada (Peces en Siluetas Blancas) -->
+          <div class="ocean-sealife-bg" aria-hidden="true">
+            <!-- Cardumen de 3 peces (derecha a izquierda) -->
+            <div class="sealife-item sealife-school-wrap">
+              <svg class="sealife-svg school-svg" viewBox="0 0 52 28" fill="currentColor">
+                <g transform="translate(0, 6)">
+                  <path d="M0 6 C4 2 14 1 18 5 L 24 1 L 22 6 L 24 11 L 18 7 C 14 11 4 10 0 6 Z"/>
+                  <path d="M9 2.5 Q13 0.5 15 3.5 Z"/>
+                </g>
+                <g transform="translate(20, 0) scale(0.75)">
+                  <path d="M0 6 C4 2 14 1 18 5 L 24 1 L 22 6 L 24 11 L 18 7 C 14 11 4 10 0 6 Z"/>
+                  <path d="M9 2.5 Q13 0.5 15 3.5 Z"/>
+                </g>
+                <g transform="translate(18, 14) scale(0.68)">
+                  <path d="M0 6 C4 2 14 1 18 5 L 24 1 L 22 6 L 24 11 L 18 7 C 14 11 4 10 0 6 Z"/>
+                  <path d="M9 2.5 Q13 0.5 15 3.5 Z"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Pez tropical solitario (derecha a izquierda) -->
+            <div class="sealife-item sealife-solo-fish-wrap">
+              <svg class="sealife-svg single-fish-svg" viewBox="0 0 30 22" fill="currentColor">
+                <path d="M0 11 C4 4 14 1 20 6 L 28 0 L 25 11 L 28 22 L 20 16 C 14 21 4 18 0 11 Z"/>
+                <path d="M10 3 C13 -3 18 -1 19 4 Z"/>
+                <path d="M10 19 C12 25 16 24 17 18 Z"/>
+              </svg>
+            </div>
+
+            <!-- Pareja de pececillos (izquierda a derecha) -->
+            <div class="sealife-item sealife-pair-wrap">
+              <svg class="sealife-svg pair-fish-svg" viewBox="0 0 42 22" fill="currentColor">
+                <g transform="translate(0, 2)">
+                  <path d="M26 6 C22 2 12 1 8 5 L 2 1 L 4 6 L 2 11 L 8 7 C 12 11 22 10 26 6 Z"/>
+                  <path d="M17 2.5 Q13 0.5 11 3.5 Z"/>
+                </g>
+                <g transform="translate(14, 10) scale(0.7)">
+                  <path d="M26 6 C22 2 12 1 8 5 L 2 1 L 4 6 L 2 11 L 8 7 C 12 11 22 10 26 6 Z"/>
+                  <path d="M17 2.5 Q13 0.5 11 3.5 Z"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Pececillo ágil inferior (izquierda a derecha) -->
+            <div class="sealife-item sealife-swift-fish-wrap">
+              <svg class="sealife-svg swift-fish-svg" viewBox="0 0 26 12" fill="currentColor">
+                <path d="M26 6 C22 2 12 1 8 5 L 2 1 L 4 6 L 2 11 L 8 7 C 12 11 22 10 26 6 Z"/>
+                <path d="M17 2.5 Q13 0.5 11 3.5 Z"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="ocean-wave-bg" aria-hidden="true">
+            <svg class="ocean-waves" viewBox="0 24 150 28" preserveAspectRatio="none">
+              <defs>
+                <path id="gentle-wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+              </defs>
+              <g class="wave-parallax">
+                <use href="#gentle-wave-path" xlink:href="#gentle-wave-path" x="48" y="0" class="wave-item wave-1" />
+                <use href="#gentle-wave-path" xlink:href="#gentle-wave-path" x="48" y="3" class="wave-item wave-2" />
+                <use href="#gentle-wave-path" xlink:href="#gentle-wave-path" x="48" y="5" class="wave-item wave-3" />
+                <use href="#gentle-wave-path" xlink:href="#gentle-wave-path" x="48" y="7" class="wave-item wave-4" />
+              </g>
+            </svg>
+          </div>
+          <div class="header-left">
+            <button class="icon-btn header-ocean-btn" onclick="navigateTo('view-profile')" aria-label="Menú">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+          </div>
+          <div class="brand-logo" onclick="navigateTo('view-home')">
+            <img src="images/logo-inparques.png" alt="Inparques" class="inparques-logo-img" />
+            <img src="images/logo-islalarga2.svg" alt="IslaLarga.com" class="brand-logo-img" />
+          </div>
+          <div class="header-right">
+            <button class="icon-btn header-ocean-btn notification-badge" onclick="showToast('Tienes 1 aviso importante de navegación')" aria-label="Notificaciones">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="home-container">
+          <!-- Hero Banner Card -->
+          <div class="hero-card">
+            <img src="images/muelle-la-rosa.jpg" alt="Isla Larga Vista Aérea" />
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <h1>Isla Larga</h1>
+              <h2>Un paraíso por descubrir</h2>
+              <p>Naturaleza, aventura y gastronomía en una isla única del Caribe venezolano.</p>
+              <button class="hero-cta-btn" id="btn-start-plan">
+                <span>Planificar mi visita</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Access 2x2 Grid -->
+          <div class="quick-access-grid">
+            <div class="quick-card" id="quick-btn-traslado">
+              <div class="quick-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 19c2.5-1 5.5-1 8 0s5.5 1 8 0 4-1 4-1"/>
+                  <path d="M3.5 15.5L6 7h10l3.5 8.5H3.5z"/>
+                  <path d="M10 7V4.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1V7"/>
+                  <line x1="12" y1="11" x2="16" y2="11"/>
+                </svg>
+              </div>
+              <span class="quick-card-title">Reservar traslado</span>
+            </div>
+
+            <div class="quick-card" id="quick-btn-actividades">
+              <div class="quick-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v4a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8z"/>
+                  <circle cx="8.5" cy="11.5" r="2.5"/>
+                  <circle cx="15.5" cy="11.5" r="2.5"/>
+                  <path d="M11 11.5h2"/>
+                  <path d="M19.5 8V4.5a1.5 1.5 0 0 1 3 0V14a3 3 0 0 1-3 3h-1"/>
+                </svg>
+              </div>
+              <span class="quick-card-title">Actividades</span>
+            </div>
+
+            <div class="quick-card" id="quick-btn-restaurante">
+              <div class="quick-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 3v18"/>
+                  <path d="M21 3c0 3.5-1.8 5-3 5"/>
+                  <path d="M4 3v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3"/>
+                  <line x1="6" y1="11" x2="6" y2="21"/>
+                </svg>
+              </div>
+              <span class="quick-card-title">Restaurante</span>
+            </div>
+
+            <div class="quick-card" id="quick-btn-reservas">
+              <div class="quick-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 9a3 3 0 0 1 0 6v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3a3 3 0 0 1 0-6V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v3z"/>
+                  <line x1="13" y1="5" x2="13" y2="7"/>
+                  <line x1="13" y1="11" x2="13" y2="13"/>
+                  <line x1="13" y1="17" x2="13" y2="19"/>
+                  <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                </svg>
+              </div>
+              <span class="quick-card-title">Mis reservas</span>
+            </div>
+          </div>
+
+          <!-- Clima en tiempo real (Puerto Cabello) -->
+          <div class="weather-pill-banner" id="quick-btn-weather" role="button" aria-label="Ver clima en tiempo real de Puerto Cabello">
+            <div class="weather-pill-left">
+              <div class="weather-pill-icon-box" id="weather-icon-pill">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path></svg>
+              </div>
+              <div class="weather-pill-info">
+                <div class="weather-pill-title-row">
+                  <span class="weather-pill-temp" id="weather-temp-pill">--°C</span>
+                  <span class="weather-pill-sep">•</span>
+                  <span class="weather-pill-city">Puerto Cabello</span>
+                  <span class="weather-live-badge"><span class="weather-live-dot"></span>EN VIVO</span>
+                </div>
+                <div class="weather-pill-subtitle" id="weather-sub-pill">Consultando estación meteorológica...</div>
+              </div>
+            </div>
+            <div class="weather-pill-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Mini Guide Preview -->
+          <h3 class="info-section-title">Información básica</h3>
+          <div class="mini-guide-card" onclick="navigateTo('view-discover')">
+            <img src="images/kayak-aguas-cristalinas.jpg" alt="Isla Larga Aguas Cristalinas" loading="lazy" decoding="async" />
+            <div class="mini-guide-body">
+              <h4>El secreto mejor guardado de Puerto Cabello</h4>
+              <p>Aguas cristalinas de color turquesa, arenas blancas y los históricos barcos hundidos ideales para el buceo y snorkel.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           3. VISTA: SELECCIONAR TRASLADO
+           ==================================================================== -->
+      <section class="view" id="view-transfer">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Traslado</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <!-- Card Gañango -->
+          <div class="transfer-card" id="card-transfer-ganango" data-origin="Gañango">
+            <div class="transfer-img-wrapper">
+              <img src="images/gañango.jpg" alt="Muelle Gañango" loading="lazy" decoding="async" />
+              <div class="transfer-badge">Muelle Gañango</div>
+            </div>
+            <div class="transfer-card-body">
+              <div class="transfer-title-row">
+                <span class="transfer-title">Gañango</span>
+                <span class="transfer-price">$5 <small style="font-size:0.75rem; font-weight:normal;">/ persona</small></span>
+              </div>
+              <div class="transfer-meta">Salidas continuas • Tiempo estimado: 15 min</div>
+
+              <div class="stepper-row">
+                <span class="stepper-label">Pasajeros:</span>
+                <div class="stepper">
+                  <button class="stepper-btn" id="btn-minus-ganango">-</button>
+                  <span class="stepper-value" id="count-ganango">0</span>
+                  <button class="stepper-btn" id="btn-plus-ganango">+</button>
+                </div>
+              </div>
+
+              <div class="full-boat-option" id="opt-full-boat-ganango">
+                <div class="full-boat-left">
+                  <div class="custom-checkbox" id="cb-full-boat-ganango"></div>
+                  <span class="full-boat-text">Lancha completa</span>
+                </div>
+                <span class="full-boat-price">$60</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card La Rosa -->
+          <div class="transfer-card selected" id="card-transfer-larosa" data-origin="La Rosa">
+            <div class="transfer-img-wrapper">
+              <img src="images/larosa.jpg" alt="Muelle La Rosa" loading="lazy" decoding="async" />
+              <div class="transfer-badge">Muelle La Rosa</div>
+            </div>
+            <div class="transfer-card-body">
+              <div class="transfer-title-row">
+                <span class="transfer-title">La Rosa</span>
+                <span class="transfer-price">$5 <small style="font-size:0.75rem; font-weight:normal;">/ persona</small></span>
+              </div>
+              <div class="transfer-meta">Estacionamiento vigilado • Salidas puntuales</div>
+
+              <div class="stepper-row">
+                <span class="stepper-label">Pasajeros:</span>
+                <div class="stepper">
+                  <button class="stepper-btn" id="btn-minus-larosa">-</button>
+                  <span class="stepper-value" id="count-larosa">0</span>
+                  <button class="stepper-btn" id="btn-plus-larosa">+</button>
+                </div>
+              </div>
+
+              <div class="full-boat-option" id="opt-full-boat-larosa">
+                <div class="full-boat-left">
+                  <div class="custom-checkbox" id="cb-full-boat-larosa"></div>
+                  <span class="full-boat-text">Lancha completa</span>
+                </div>
+                <span class="full-boat-price">$60</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-banner-notice">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Viajes de <strong>8:00 a. m. a 4:00 p. m.</strong> de forma continua.</span>
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <button class="btn btn-primary" id="btn-transfer-continue">Continuar</button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4. VISTA: FECHA Y HORA
+           ==================================================================== -->
+      <section class="view" id="view-datetime">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-transfer')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Fecha y hora</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <!-- Calendar -->
+          <div class="calendar-card">
+            <div class="calendar-header">
+              <span class="calendar-month-title" id="calendar-month-name"></span>
+              <div class="calendar-header-actions">
+                <button class="calendar-nav-btn" id="btn-calendar-prev" type="button" aria-label="Mes anterior">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="calendar-today-btn" id="btn-calendar-today" type="button">Hoy</button>
+                <button class="calendar-nav-btn" id="btn-calendar-next" type="button" aria-label="Mes siguiente">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="calendar-weekdays">
+              <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+            </div>
+            <div class="calendar-days-grid" id="calendar-grid">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Time Slots -->
+          <div class="section-subtitle">Selecciona el horario de zarpe</div>
+          <div class="time-slots-grid">
+            <div class="time-slot-pill active" data-time="8:00 a. m.">8:00 a. m.</div>
+            <div class="time-slot-pill" data-time="9:00 a. m.">9:00 a. m.</div>
+            <div class="time-slot-pill" data-time="10:00 a. m.">10:00 a. m.</div>
+            <div class="time-slot-pill" data-time="11:00 a. m.">11:00 a. m.</div>
+            <div class="time-slot-pill" data-time="1:00 p. m.">1:00 p. m.</div>
+            <div class="time-slot-pill" data-time="3:00 p. m.">3:00 p. m.</div>
+          </div>
+
+          <!-- Availability & Service Status -->
+          <div class="availability-card">
+            <div class="availability-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="availability-text">
+              <strong>Cupos disponibles</strong>
+              <span>Servicio marítimo 100% operativo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <button class="btn btn-primary" id="btn-datetime-continue">Continuar</button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           5. VISTA: SERVICIOS ADICIONALES
+           ==================================================================== -->
+      <section class="view" id="view-services">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-datetime')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Servicios adicionales</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <!-- Toldo + 4 Sillas -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="images/toldoysillas.jpg" alt="Toldo y 4 sillas" loading="lazy" decoding="async" />
+              </div>
+            <div class="service-card-body">
+              <div class="service-card-header">
+                <span class="service-title">Toldo + 4 sillas</span>
+                <span class="service-price">$20</span>
+              </div>
+              <p class="service-desc">Comodidad y sombra en la mejor zona de playa de la ensenada.</p>
+              <div class="service-action-row">
+                <button class="btn-add-service" data-service="toldo">
+                  <span>Agregar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clase de Buceo -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="images/buceo.jpg" alt="Clase de buceo en Isla Larga" loading="lazy" decoding="async" />
+              </div>
+            <div class="service-card-body">
+              <div class="service-card-header">
+                <span class="service-title">Clase de buceo</span>
+                <span class="service-price">$40 <small style="font-size:0.75rem; color:#64748b;">/ persona</small></span>
+              </div>
+              <p class="service-desc">30 minutos guiados con instructor certificado y equipo en los arrecifes.</p>
+              <div class="service-action-row">
+                <button class="btn-add-service" data-service="buceo">
+                  <span>Agregar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kayak -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="images/kayak-aguas-cristalinas.jpg" alt="Kayak en aguas cristalinas" loading="lazy" decoding="async" />
+              </div>
+            <div class="service-card-body">
+              <div class="service-card-header">
+                <span class="service-title">Kayak</span>
+                <span class="service-price">$40 <small style="font-size:0.75rem; color:#64748b;">/ 2 personas</small></span>
+              </div>
+              <p class="service-desc">Paseo inolvidable en kayak doble por las aguas transparentes y calmas.</p>
+              <div class="service-action-row">
+                <button class="btn-add-service" data-service="kayak">
+                  <span>Agregar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <button class="btn btn-primary" id="btn-services-continue">Continuar</button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           6. VISTA: RESTAURANTE (Sabores de Isla Larga)
+           ==================================================================== -->
+      <section class="view" id="view-restaurant">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-services')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Restaurante</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div class="restaurant-hero-banner">
+            <h3>Sabores de Isla Larga</h3>
+            <p>Gastronomía fresca, local y del mar preparada al instante.</p>
+          </div>
+
+          <!-- Categories Scroll -->
+          <div class="category-filter-scroll">
+            <button class="category-pill active" data-category="todos">Todos</button>
+            <button class="category-pill" data-category="pescado">Pescado frito</button>
+            <button class="category-pill" data-category="ceviche">Ceviche</button>
+            <button class="category-pill" data-category="tostones">Tostones</button>
+            <button class="category-pill" data-category="bebidas">Bebidas</button>
+            <button class="category-pill" data-category="combos">Combos</button>
+          </div>
+
+          <!-- Food items -->
+          <div class="food-card" data-food-id="pescado" data-food-cat="pescado">
+            <img src="images/pescado-frito.jpg" alt="Pescado frito" class="food-img" loading="lazy" decoding="async" />
+            <div class="food-details">
+              <div class="food-title">Pescado frito</div>
+              <p class="food-desc">Pescado fresco del día, con tostones crujientes y ensalada rayada.</p>
+              <div class="food-price-row">
+                <span class="food-price">$12</span>
+                <div class="food-action-wrapper" data-food-id="pescado">
+                  <button class="btn-food-add" data-food-id="pescado" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Agregar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-card" data-food-id="ceviche" data-food-cat="ceviche">
+            <img src="images/ceviche.jpg" alt="Ceviche" class="food-img" loading="lazy" decoding="async" />
+            <div class="food-details">
+              <div class="food-title">Ceviche</div>
+              <p class="food-desc">Ceviche de pescado fresco con limón, cebolla morada y cilantro.</p>
+              <div class="food-price-row">
+                <span class="food-price">$10</span>
+                <div class="food-action-wrapper" data-food-id="ceviche">
+                  <button class="btn-food-add" data-food-id="ceviche" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Agregar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-card" data-food-id="tostones" data-food-cat="tostones">
+            <img src="images/tostones.jpg" alt="Tostones" class="food-img" loading="lazy" decoding="async" />
+            <div class="food-details">
+              <div class="food-title">Tostones</div>
+              <p class="food-desc">Ración de tostones crujientes, queso blanco y salsas de ajo de la casa.</p>
+              <div class="food-price-row">
+                <span class="food-price">$6</span>
+                <div class="food-action-wrapper" data-food-id="tostones">
+                  <button class="btn-food-add" data-food-id="tostones" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Agregar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-card" data-food-id="bebidas" data-food-cat="bebidas">
+            <img src="images/bebidas-frias.jpg" alt="Bebidas frías" class="food-img" loading="lazy" decoding="async" />
+            <div class="food-details">
+              <div class="food-title">Bebidas</div>
+              <p class="food-desc">Agua mineral, agua de coco natural, refrescos o cervezas bien frías.</p>
+              <div class="food-price-row">
+                <span class="food-price">$3</span>
+                <div class="food-action-wrapper" data-food-id="bebidas">
+                  <button class="btn-food-add" data-food-id="bebidas" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Agregar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="food-card" data-food-id="combo" data-food-cat="combos">
+            <img src="images/combo-playero.jpg" alt="Combo playero" class="food-img" loading="lazy" decoding="async" />
+            <div class="food-details">
+              <div class="food-title">Combo Playero</div>
+              <p class="food-desc">2 pescados fritos, ración doble de tostones y 2 bebidas a elección.</p>
+              <div class="food-price-row">
+                <span class="food-price">$25</span>
+                <div class="food-action-wrapper" data-food-id="combo">
+                  <button class="btn-food-add" data-food-id="combo" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Agregar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <button class="btn btn-primary" id="btn-restaurant-continue">Continuar</button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           7. VISTA: RESUMEN DE RESERVA
+           ==================================================================== -->
+      <section class="view" id="view-summary">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-restaurant')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Resumen de reserva</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div class="summary-card">
+            <div class="summary-row">
+              <span class="summary-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17c1.5 0 2.5-.5 3.5-1s2-.5 3.5-.5 2.5.5 3.5 1 2 .5 3.5.5 2.5-.5 3.5-1 2-.5 3.5-.5"/><path d="M4 14l3-7h10l3 7H4z"/></svg>
+                Traslado
+              </span>
+              <span class="summary-value" id="summary-origin-val">La Rosa</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Personas
+              </span>
+              <span class="summary-value" id="summary-passengers-val">2</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Fecha
+              </span>
+              <span class="summary-value" id="summary-date-val">22 mar 2025</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Hora
+              </span>
+              <span class="summary-value" id="summary-time-val">8:00 a. m.</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row">
+              <span class="summary-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Servicios adicionales
+              </span>
+            </div>
+            <div class="summary-item-sublist" id="summary-services-list">
+              <!-- Rendered via JS -->
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row">
+              <span class="summary-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>
+                Restaurante
+              </span>
+            </div>
+            <div class="summary-item-sublist" id="summary-restaurant-list">
+              <!-- Rendered via JS -->
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total-row">
+              <span>Total</span>
+              <span class="total-amount" id="summary-grand-total">$92</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <div style="display:flex; gap:10px;">
+            <button class="btn btn-secondary" id="btn-summary-edit" style="flex:0.8;">Editar</button>
+            <button class="btn btn-primary" id="btn-summary-continue" style="flex:1.2;">Continuar al pago</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           8. VISTA: DATOS DEL CLIENTE
+           ==================================================================== -->
+      <section class="view" id="view-customer">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-summary')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Datos del cliente</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div class="form-group">
+            <label class="form-label">Nombre completo</label>
+            <div class="input-with-icon">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </span>
+              <input type="text" class="form-input" id="input-cust-name" value="María García" placeholder="Tu nombre" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Teléfono / WhatsApp</label>
+            <div class="input-with-icon">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </span>
+              <input type="tel" class="form-input" id="input-cust-phone" value="+58 412 1234567" placeholder="+58 412 1234567" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Correo electrónico</label>
+            <div class="input-with-icon">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <input type="email" class="form-input" id="input-cust-email" value="maria@gmail.com" placeholder="correo@ejemplo.com" />
+            </div>
+          </div>
+
+          <label class="terms-row">
+            <input type="checkbox" id="check-cust-terms" checked />
+            <span>Acepto los términos y condiciones de navegación y la política de privacidad de IslaLarga.com.</span>
+          </label>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <button class="btn btn-primary" id="btn-customer-continue">Continuar al pago</button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           9. VISTA: PAGO (PAGO MÓVIL)
+           ==================================================================== -->
+      <section class="view no-bottom-nav" id="view-payment">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-customer')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Pago móvil</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div class="payment-info-box">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              Datos de pago
+            </h4>
+
+            <div class="bank-row">
+              <span class="bank-label">Banco</span>
+              <div class="bank-value-group">
+                <span>Banesco (0134)</span>
+                <button class="copy-badge-btn" id="copy-bank-name">Copiar</button>
+              </div>
+            </div>
+
+            <div class="bank-row">
+              <span class="bank-label">Teléfono</span>
+              <div class="bank-value-group">
+                <span>0412 1234567</span>
+                <button class="copy-badge-btn" id="copy-bank-phone">Copiar</button>
+              </div>
+            </div>
+
+            <div class="bank-row">
+              <span class="bank-label">Cédula / RIF</span>
+              <div class="bank-value-group">
+                <span>V-12345678</span>
+                <button class="copy-badge-btn" id="copy-bank-rif">Copiar</button>
+              </div>
+            </div>
+
+            <div class="amount-due-highlight">
+              <div class="label">Monto a pagar</div>
+              <div class="val" id="pay-monto-ves">Bs. 0,00</div>
+              <div class="ves" id="pay-monto-usd">Ref: $0.00 USD</div>
+            </div>
+          </div>
+
+          <!-- Client confirmation form -->
+          <div class="section-subtitle">Datos de verificación</div>
+
+          <div class="form-group">
+            <label class="form-label">Número de Referencia (Últimos 6 dígitos)</label>
+            <input type="text" class="form-input" id="pay-client-ref" placeholder="Ej: 123456" maxlength="6" inputmode="numeric" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Número telefónico (Pago Móvil)</label>
+            <input type="tel" class="form-input" id="pay-client-phone" placeholder="Ej: 0412 1234567" />
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action no-bottom-nav">
+          <button class="btn btn-primary" id="btn-confirm-payment">Confirmar pago</button>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           10. VISTA: VERIFICACIÓN DEL PAGO
+           ==================================================================== -->
+      <section class="view no-bottom-nav" id="view-verifying">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-payment')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Verificando pago...</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="verification-container">
+          <div class="radar-spinner-wrapper">
+            <div class="radar-spinner"></div>
+          </div>
+
+          <h2 class="verification-heading">Estamos verificando tu pago</h2>
+          <p class="verification-subheading">Por favor espera un instante mientras validamos con el banco...</p>
+
+          <div class="steps-progress-list">
+            <div class="step-progress-item" id="verify-step-1">
+              <div class="step-dot">1</div>
+              <span>Pago enviado</span>
+            </div>
+            <div class="step-progress-item" id="verify-step-2">
+              <div class="step-dot">2</div>
+              <span>Procesando</span>
+            </div>
+            <div class="step-progress-item" id="verify-step-3">
+              <div class="step-dot">3</div>
+              <span>Verificando</span>
+            </div>
+            <div class="step-progress-item" id="verify-step-4">
+              <div class="step-dot">4</div>
+              <span>Confirmación</span>
+            </div>
+          </div>
+
+          <!-- Boat wave illustration -->
+          <div class="boat-wave-decoration">
+            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" stroke="#008489" stroke-width="2">
+              <path d="M10 30 Q30 20 60 30 T110 30" stroke-linecap="round"/>
+              <path d="M45 25 L55 12 L75 25 Z" fill="#e6f6f6"/>
+              <line x1="60" y1="12" x2="60" y2="25"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           11. VISTA: RESERVA CONFIRMADA
+           ==================================================================== -->
+      <section class="view" id="view-confirmed">
+        <header class="app-header">
+          <div class="header-left"></div>
+          <div class="header-title">Reserva Confirmada</div>
+          <div class="header-right">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="view-body">
+          <div class="confirmed-badge-circle">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+
+          <h2 class="confirmed-title">¡Reserva confirmada!</h2>
+          <div style="text-align:center;">
+            <span class="reservation-code-pill" id="conf-code-display">IL-4587</span>
+          </div>
+
+          <div class="confirmed-details-card">
+            <div class="confirmed-row">
+              <span class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+                Fecha
+              </span>
+              <span class="val" id="conf-date-val">22 mar 2025</span>
+            </div>
+
+            <div class="confirmed-row">
+              <span class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Hora
+              </span>
+              <span class="val" id="conf-time-val">8:00 a. m.</span>
+            </div>
+
+            <div class="confirmed-row">
+              <span class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 17c1.5 0 2.5-.5 3.5-1s2-.5 3.5-.5 2.5.5 3.5 1 2 .5 3.5.5 2.5-.5 3.5-1 2-.5 3.5-.5"/><path d="M4 14l3-7h10l3 7H4z"/></svg>
+                Punto de salida
+              </span>
+              <span class="val" id="conf-origin-val">Muelle La Rosa</span>
+            </div>
+
+            <div class="confirmed-row">
+              <span class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                Personas
+              </span>
+              <span class="val" id="conf-passengers-val">2</span>
+            </div>
+
+            <div class="confirmed-row">
+              <span class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Servicios
+              </span>
+              <span class="val" id="conf-services-val">Toldo + 4 sillas, Kayak</span>
+            </div>
+
+            <div class="confirmed-row">
+              <span class="label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>
+                Restaurante
+              </span>
+              <span class="val" id="conf-restaurant-val">Pescado frito</span>
+            </div>
+
+            <div class="confirmed-row" style="border-top:1px solid #e2e8f0; padding-top:8px;">
+              <span class="label" style="font-weight:700; color:#0f172a;">Total pagado</span>
+              <span class="val" style="font-size:1.15rem; color:#008489;" id="conf-total-val">$92</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky-bottom-action">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <button class="btn btn-primary" id="btn-view-qr">Ver QR</button>
+            <div style="display:flex; gap:10px;">
+              <button class="btn btn-secondary" id="btn-whatsapp-share" style="flex:1;">
+                <span>💬 WhatsApp</span>
+              </button>
+              <button class="btn btn-guest" id="btn-download-voucher" style="flex:1;">
+                <span>📥 Descargar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           12. VISTA: QR DE RESERVA
+           ==================================================================== -->
+      <section class="view" id="view-qr">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="handleQrBack()">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title" id="qr-code-header-title">Código: IL-4587</div>
+          <div class="header-right">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="qr-container">
+          <div class="qr-code-wrapper">
+            <div id="qr-canvas-holder">
+              <!-- Crisp SVG QR Code generated here -->
+            </div>
+            <div class="qr-status-badge" id="qr-status-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span id="qr-status-text">Pago Verificado</span>
+            </div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-top: 8px;" id="qr-code-display-value">IL-4587</div>
+            <div class="qr-security-token" id="qr-security-token">Sello: INP-8F29-C4E1</div>
+          </div>
+
+          <div class="qr-instruction-callout">
+            <strong style="display:block; color:#0f172a; margin-bottom:2px;">Embarque seguro:</strong>
+            Presenta este código QR en el muelle al momento de abordar la lancha.
+          </div>
+
+          <div style="display:flex; gap:10px; width:100%;">
+            <button class="btn btn-secondary" onclick="shareViaWhatsApp()" style="flex:1;">Compartir</button>
+            <button class="btn btn-guest" onclick="downloadVoucher()" style="flex:1;">Guardar</button>
+          </div>
+
+          <div class="boat-wave-decoration" style="margin-top:24px;">
+            <svg width="100" height="30" viewBox="0 0 120 40" fill="none" stroke="#008489" stroke-width="2">
+              <path d="M10 30 Q30 20 60 30 T110 30" stroke-linecap="round"/>
+              <path d="M45 25 L55 12 L75 25 Z" fill="#e6f6f6"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           13. VISTA: MIS RESERVAS
+           ==================================================================== -->
+      <section class="view" id="view-my-reservations">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Mis reservas</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div class="segmented-tabs">
+            <button class="tab-btn active" id="tab-res-proxima">Próxima</button>
+            <button class="tab-btn" id="tab-res-anteriores">Anteriores</button>
+          </div>
+
+          <div id="reservations-list-container">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           15. VISTA: DESCUBRE ISLA LARGA (Guía Turística)
+           ==================================================================== -->
+      <section class="view" id="view-discover">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Descubre Isla Larga</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div style="border-radius: var(--radius-md); overflow:hidden; position:relative; height: 160px; margin-bottom: 6px;">
+            <img src="images/muelle-la-rosa.jpg" alt="Isla Larga" style="width:100%; height:100%; object-fit:cover;" />
+            <div style="position:absolute; inset:0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);"></div>
+            <span style="position:absolute; bottom:12px; left:14px; color:#ffffff; font-weight:800; font-size:1.15rem;">Parque Nacional San Esteban</span>
+          </div>
+
+          <!-- Accordion 1: Sobre Isla Larga -->
+          <div class="guide-accordion-item open">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span>Sobre Isla Larga</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              Isla Larga es la joya marina de Carabobo. Forma parte del Parque Nacional San Esteban y destaca por sus aguas cristalinas, playas de arena blanca y suave oleaje ideal para toda la familia.
+            </div>
+          </div>
+
+          <!-- Accordion 2: Qué hacer -->
+          <div class="guide-accordion-item">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+                <span>Qué hacer</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              Disfruta de caminatas ecológicas por la orilla, descanso bajo toldos, natación en piscinas naturales cristalinas, fotografía de manglares y avistamiento de aves marinas.
+            </div>
+          </div>
+
+          <!-- Accordion 3: Buceo -->
+          <div class="guide-accordion-item">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <line x1="12" y1="22" x2="12" y2="8"></line>
+                  <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                </svg>
+                <span>Buceo y Naufragios</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              Famosa por albergar los buques mercantes alemanes e italianos hundidos en 1941 (como el carguero alemán <em>Sesostris</em>). Hoy son arrecifes artificiales vibrantes con corales, esponjas y cientos de peces tropicales.
+            </div>
+          </div>
+
+          <!-- Accordion 4: Kayak -->
+          <div class="guide-accordion-item">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 17c1.5 0 2.5-.5 3.5-1s2-.5 3.5-.5 2.5.5 3.5 1 2 .5 3.5.5 2.5-.5 3.5-1 2-.5 3.5-.5"></path>
+                  <path d="M4 14l3-7h10l3 7H4z"></path>
+                  <circle cx="12" cy="7" r="1.5"></circle>
+                </svg>
+                <span>Kayak</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              Alquila kayaks dobles para explorar la ensenada protegida de la isla. Sus aguas tranquilas permiten una navegación placentera y segura para todos los niveles.
+            </div>
+          </div>
+
+          <!-- Accordion 5: Gastronomía -->
+          <div class="guide-accordion-item">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+                <span>Gastronomía</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              Pescado frito fresco recién sacado por pescadores artesanales, tostones con queso y salsa tártara casera, ceviche con limón natural y refrescante agua de coco fría.
+            </div>
+          </div>
+
+          <!-- Accordion 6: Cómo llegar -->
+          <div class="guide-accordion-item" id="acc-item-como-llegar">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Cómo llegar</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              Llegas a Puerto Cabello por la autopista Valencia - Puerto Cabello. Desde allí te trasladas al <strong>Muelle de Gañango</strong> o al <strong>Muelle La Rosa</strong> donde tomas las lanchas autorizadas que te llevan en 15 minutos.
+            </div>
+          </div>
+
+          <!-- Accordion 7: Qué llevar -->
+          <div class="guide-accordion-item">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Qué llevar</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              • Protector solar biodegradable.<br>
+              • Toalla y ropa de cambio.<br>
+              • Zapatos de agua o cholas.<br>
+              • Efectivo o pago móvil activo para consumos.<br>
+              • Bolsa para recoger tus desechos (¡cuidemos el parque!).
+            </div>
+          </div>
+
+          <!-- Accordion 8: Preguntas frecuentes -->
+          <div class="guide-accordion-item" id="acc-item-faqs">
+            <div class="guide-accordion-header">
+              <span class="acc-title">
+                <svg class="acc-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <span>Preguntas frecuentes</span>
+              </span>
+              <span class="acc-chevron">▼</span>
+            </div>
+            <div class="guide-accordion-content">
+              <strong>¿A qué hora es el último retorno?</strong> Las lanchas retornan hasta las 4:00 p. m.<br><br>
+              <strong>¿Se permiten mascotas?</strong> Por ser Parque Nacional protegido por INPARQUES, está restringido el acceso de mascotas.<br><br>
+              <strong>¿Hay señal telefónica?</strong> Sí, Movistar y Digitel cuentan con cobertura en la isla.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           16. VISTA: ESTADO DE OPERACIÓN
+           ==================================================================== -->
+      <section class="view" id="view-status">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Estado de operación</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <!-- Hero badge -->
+          <div class="operation-status-hero op-green" id="op-status-card">
+            <div class="op-badge-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:4px;" id="op-title">Operativo</h3>
+            <p style="font-size:0.85rem;" id="op-subtitle">Navegación autorizada por Capitanía de Puerto</p>
+          </div>
+
+          <div class="section-subtitle">Condiciones marítimas del día</div>
+          <div class="marine-conditions-grid">
+            <div class="marine-card">
+              <div class="lbl">Oleaje</div>
+              <div class="val">0.6 m</div>
+              <div class="lbl" style="color:#10b981;">Calmo</div>
+            </div>
+            <div class="marine-card">
+              <div class="lbl">Viento</div>
+              <div class="val">11 kts</div>
+              <div class="lbl" style="color:#0ea5e9;">Brisa NE</div>
+            </div>
+            <div class="marine-card">
+              <div class="lbl">Visibilidad</div>
+              <div class="val">16 m</div>
+              <div class="lbl" style="color:#10b981;">Cristalina</div>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-row">
+              <span class="summary-label">🕒 Horarios de traslado:</span>
+              <span class="summary-value">8:00 a. m. a 4:00 p. m.</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">⚓ Muelles operativos:</span>
+              <span class="summary-value">Gañango y La Rosa</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">👮 Guardaparques:</span>
+              <span class="summary-value">INPARQUES activo</span>
+            </div>
+          </div>
+
+          <div class="section-subtitle">Avisos importantes</div>
+          <div class="info-banner-notice" style="background:#eff6ff; border-color:#bfdbfe; color:#1e40af;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Se recuerda a los visitantes el uso obligatorio de chaleco salvavidas durante el trayecto en lancha.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           17. VISTA: PERFIL
+           ==================================================================== -->
+      <section class="view" id="view-profile">
+        <header class="app-header">
+          <div class="header-left">
+            <button class="icon-btn" onclick="navigateTo('view-home')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+          </div>
+          <div class="header-title">Mi perfil</div>
+          <div class="header-right"></div>
+        </header>
+
+        <div class="view-body">
+          <div class="profile-card">
+            <img src="images/avatar-usuario.jpg" alt="María García" class="profile-avatar" />
+            <div class="profile-info">
+              <h3 id="profile-display-name">María García</h3>
+              <p id="profile-display-email">maria@gmail.com</p>
+              <p id="profile-display-phone" style="color:#008489; font-weight:600;">+58 412 1234567</p>
+            </div>
+          </div>
+
+          <div class="profile-menu-list">
+            <div class="profile-menu-item" id="btn-edit-profile">
+              <div class="left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                <span>Editar información</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <div class="profile-menu-item" id="btn-profile-reservas">
+              <div class="left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Mis reservas</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <div class="profile-menu-item" onclick="showToast('Notificaciones activas para avisos de zarpe')">
+              <div class="left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span>Notificaciones</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <div class="profile-menu-item" onclick="navigateTo('view-discover')">
+              <div class="left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <span>Términos y condiciones</span>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <div class="profile-menu-item danger-text" id="btn-profile-logout">
+              <div class="left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span>Cerrar sesión</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ====================================================================
+         BOTTOM NAVIGATION BAR (Standard on Main Views)
+         ==================================================================== -->
+    <nav class="bottom-nav d-none" id="bottom-nav">
+      <button class="nav-item active" id="nav-home">
+        <span class="nav-item-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-5a1 1 0 0 1-1-1v-4a1.5 1.5 0 0 0-3 0v4a1 1 0 0 1-1 1h-5A1.5 1.5 0 0 1 3 20v-9.5z"/>
+          </svg>
+        </span>
+        <span class="nav-item-label">Inicio</span>
+      </button>
+
+      <button class="nav-item" id="nav-discover">
+        <span class="nav-item-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <line x1="12" y1="11" x2="12" y2="16"/>
+            <circle cx="12" cy="8" r="0.75" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-item-label">Info</span>
+      </button>
+
+      <button class="nav-item" id="nav-status">
+        <span class="nav-item-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 7.5 12.5 7.5 12.5s7.5-7.25 7.5-12.5A7.5 7.5 0 0 0 12 2z"/>
+            <circle cx="12" cy="9.5" r="2.5"/>
+          </svg>
+        </span>
+        <span class="nav-item-label">Cómo llegar</span>
+      </button>
+
+      <button class="nav-item" id="nav-reservas">
+        <span class="nav-item-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <circle cx="12" cy="16" r="0.75" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-item-label">FAQ</span>
+      </button>
+
+      <button class="nav-item" id="nav-profile">
+        <span class="nav-item-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </span>
+        <span class="nav-item-label">Perfil</span>
+      </button>
+    </nav>
+
+    <!-- ====================================================================
+         MODALS & BOTTOM SHEETS
+         ==================================================================== -->
+
+    <!-- Modal 14: DETALLE DE RESERVA -->
+    <div class="modal-overlay" id="modal-res-detail">
+      <div class="bottom-sheet">
+        <div class="sheet-drag-handle" onclick="closeModal()"></div>
+        <div id="res-detail-modal-content">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: EDITAR PERFIL -->
+    <div class="modal-overlay" id="modal-edit-profile">
+      <div class="bottom-sheet">
+        <div class="sheet-drag-handle" onclick="closeModal()"></div>
+        <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:14px; text-align:center;">Editar Información</h3>
+        
+        <div class="form-group">
+          <label class="form-label">Nombre completo</label>
+          <input type="text" class="form-input" id="edit-profile-name" value="María García" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Teléfono / WhatsApp</label>
+          <input type="tel" class="form-input" id="edit-profile-phone" value="+58 412 1234567" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Correo electrónico</label>
+          <input type="email" class="form-input" id="edit-profile-email" value="maria@gmail.com" />
+        </div>
+
+        <button class="btn btn-primary" id="btn-save-profile" style="margin-top:12px;">Guardar cambios</button>
+      </div>
+    </div>
+
+    <!-- Modal: CREAR CUENTA / RECUPERAR CONTRASEÑA -->
+    <div class="modal-overlay" id="modal-auth-form">
+      <div class="bottom-sheet">
+        <div class="sheet-drag-handle" onclick="closeModal()"></div>
+        <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:14px; text-align:center;" id="modal-auth-title">Acceso</h3>
+        
+        <div class="form-group">
+          <label class="form-label">Correo electrónico</label>
+          <input type="email" class="form-input" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-input" placeholder="••••••••" />
+        </div>
+
+        <button class="btn btn-primary" onclick="closeModal(); navigateTo('view-home'); showToast('¡Bienvenido!')" style="margin-top:10px;">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Modal Minimalista: CLIMA EN TIEMPO REAL (PUERTO CABELLO) -->
+    <div class="modal-overlay" id="modal-weather">
+      <div class="bottom-sheet weather-modal-sheet">
+        <div class="sheet-drag-handle" onclick="closeModal()"></div>
+        
+        <!-- Header minimalista -->
+        <div class="weather-modal-head">
+          <div>
+            <div class="weather-live-chip">
+              <span class="weather-live-dot"></span> EN TIEMPO REAL
+            </div>
+            <h3 class="weather-modal-title">Puerto Cabello</h3>
+            <p class="weather-modal-sub">Costa de Carabobo • Bahía de Isla Larga</p>
+          </div>
+          <button class="icon-btn weather-close-btn" onclick="closeModal()" aria-label="Cerrar modal de clima">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <!-- Indicador principal de temperatura -->
+        <div class="weather-hero-minimal">
+          <div class="weather-temp-display">
+            <span class="weather-temp-val" id="weather-modal-temp">--</span>
+            <span class="weather-temp-deg">°C</span>
+          </div>
+          <div class="weather-state-box">
+            <div class="weather-state-title" id="weather-modal-desc">Cargando...</div>
+            <div class="weather-state-sub" id="weather-modal-apparent">Sensación térmica: --°C</div>
+          </div>
+        </div>
+
+        <!-- 4 Indicadores Minimalistas -->
+        <div class="weather-indicators-grid">
+          <div class="weather-indicator-item">
+            <div class="indicator-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+            </div>
+            <div class="indicator-data">
+              <span class="indicator-label">Viento</span>
+              <span class="indicator-val" id="weather-modal-wind">-- km/h</span>
+            </div>
+          </div>
+
+          <div class="weather-indicator-item">
+            <div class="indicator-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <div class="indicator-data">
+              <span class="indicator-label">Humedad</span>
+              <span class="indicator-val" id="weather-modal-humidity">--%</span>
+            </div>
+          </div>
+
+          <div class="weather-indicator-item">
+            <div class="indicator-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#008489" stroke-width="2"><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path></svg>
+            </div>
+            <div class="indicator-data">
+              <span class="indicator-label">Oleaje</span>
+              <span class="indicator-val" id="weather-modal-sea">Calmo • 0.4 m</span>
+            </div>
+          </div>
+
+          <div class="weather-indicator-item">
+            <div class="indicator-icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <div class="indicator-data">
+              <span class="indicator-label">Navegación</span>
+              <span class="indicator-val" id="weather-modal-nav">Óptima</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer minimalista -->
+        <div class="weather-modal-foot">
+          <div class="weather-api-source">
+            <span id="weather-modal-updated">Conectando con Open-Meteo API</span>
+          </div>
+          <button class="weather-refresh-btn" id="btn-refresh-weather" aria-label="Actualizar clima">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            <span>Actualizar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/qrcode.min.js?v=9"></script>
+  <script src="js/app.js?v=9"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
